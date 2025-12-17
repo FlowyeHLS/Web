@@ -1,0 +1,26 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body 
+{
+    font-size: 24px;
+    font-family: 'Bebas Neue';
+    /*font-family: 'Bebas Neue','Segoe UI', Verdana, Geneva, Tahoma, sans-serif;*/
+    font-weight:300;
+}
+figure
+{
+    text-align:center;
+    font-style:italic;
+    font-weight:100;
+}
+h3
+{
+    font-style:italic;
+    text-decoration:underline;
+}
+p 
+{
+    /*name:value;*/    
+    
+    text-align: justify;
+    text-indent: 48px;
+}
