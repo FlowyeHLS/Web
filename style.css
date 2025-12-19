@@ -1,36 +1,10 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-body 
-{
-    font-size: 24px;
-    font-family: 'Bebas Neue';
-    /*font-family: 'Bebas Neue','Segoe UI', Verdana, Geneva, Tahoma, sans-serif;*/
-    font-weight:300;
-}
-ul
-{
-    /*list-style:georgian;*/
-    list-style:georgian;
-    
-}
-ol
-{
-list-style:upper-roman;
-}
-figure
-{
-    text-align:center;
-    font-style:italic;
-    font-weight:100;
-}
-h3
-{
-    font-style:italic;
-    text-decoration:underline;
-}
-p 
-{
-    /*name:value;*/    
-    
-    text-align: justify;
-    text-indent: 48px;
+﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: Roboto Condensed;
+    font-size 32px;
+    /*background-color:lightslategray;*/
+    /*height:96.9vh;*/
+    background-image:linear-gradient(to bottom right ,lightskyblue, purple, darkblue) ;
+    background-attachment:fixed;
+    /*background-repeat:no-repeat;*/
 }
