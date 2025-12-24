@@ -4,7 +4,7 @@ body {
     font-size 32px;
     /*background-color:lightslategray;*/
     /*height:96.9vh;*/
-    background-image:linear-gradient(to bottom right ,lightskyblue, purple, darkblue) ;
+    background-image:linear-gradient(to bottom right ,lightskyblue, purple) ;
     background-attachment:fixed;
     /*background-repeat:no-repeat;*/
 }
