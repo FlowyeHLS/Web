@@ -131,7 +131,7 @@
 
 .display
 {
-    width: 100%;
+    width: 384px;
     display:flex;
     justify-content:center;
     margin:5px 0;
@@ -144,29 +144,64 @@
 }
         /*/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,/*/
 
+.buttons
+{
+    display:flex;
+    justify-content:space-around;
+    padding:15px 5px;
+}
+.control-and-digital-buttons 
+{
+    width: 80%;
+}
+
 .memory-buttons
 {
     display: flex;
     flex-direction: column;
 /*    width:50px;
     gap: 5px;*/
-    
+    align-items:center;
+
+
 }
-.memory-buttons > button
+    .memory-buttons > button, .control-buttons > button 
+    {
+        color: red;
+    }
+
+.buttons button
 {
     width:48px;
-    height:44px;
+    height:40px;
     margin:5px;
 }
 .battery
 {
-    width:44px;
-    height:44px;
+    width:40px;
+    height:40px;
+    margin:5px;
     box-shadow:inset 1px 1px 0px 0px gray;
     border-bottom: solid 1px white;
     border-right: solid 1px white;
-    margin:2px;
     
+}
+
+.control-buttons > button
+{
+    width:87px;
+}
+
+
+.digital-buttons
+{
+    display:grid;
+    /*grid-template-rows:40px 40px 40px 40px;*/
+    grid-template-rows:repeat(4,40px);
+    grid-template-columns:repeat(5,48px);
+    grid-gap:10px 11px;
+    /*padding:5px;*/
+    /*grid-template-columns:48px 48px 48px 48px 48px;*/
 }
 
         /*/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,/*/
