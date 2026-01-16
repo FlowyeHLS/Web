@@ -1,0 +1,61 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: Roboto Condensed;
+    font-size:32px;
+    /*background-color:lightslategray;*/
+    /*height:96.9vh;*/
+    background-image:linear-gradient(to bottom right ,lightskyblue, purple) ;
+    background-attachment:fixed;
+    /*background-repeat:no-repeat;*/
+}
+summary
+{
+    font-size:32px;
+    font-weight:500px;
+}
+input
+{
+    font-size:22px;
+}
+/*------------------------------------------------------------*/
+.dark {
+    /* background-image:none;*/
+    background-image: linear-gradient(#323232, #323232);
+    color: #C8C8C8;
+    background-color: #323232;
+}
+.white
+{
+    background-image: linear-gradient(to bottom right,lightskyblue, purple);
+    color:black;
+    background-attachment: fixed;
+}
+#header
+{
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+}
+#switch-background/* > img */
+{
+    width:32px;
+    height:32px;
+}
+/*------------------------------------------------------------*/
+#photo-and-color
+{
+    display:flex;
+    justify-content:space-between;
+}
+#photo-container
+{
+    border:solid 1px;
+    width:400px;
+    height:300px;
+}
+#photo
+{
+
+    width: 400px;
+    height: 300px;
+}
