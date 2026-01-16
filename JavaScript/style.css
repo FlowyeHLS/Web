@@ -1,10 +1,14 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 body {
     font-family: Roboto Condensed;
-    font-size 32px;
+    font-size:32px;
     /*background-color:lightslategray;*/
     /*height:96.9vh;*/
     background-image:linear-gradient(to bottom right ,lightskyblue, purple) ;
     background-attachment:fixed;
     /*background-repeat:no-repeat;*/
+}
+input
+{
+    font-size:22px;
 }

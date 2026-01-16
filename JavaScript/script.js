@@ -1,0 +1,23 @@
+﻿// JavaScript source code
+function Factorial(n)
+{
+    let f = BigInt(1);
+    //document.write(typeof (f));
+    //document.write("<pre>");
+    for (let i = 1n; i <= n; ++i)
+    {
+        f *= i;
+       // document.writeln(`${i}! = ${f};`);
+    }
+    //document.write("</pre>");
+    return f;
+}
+function Factorial2()
+{
+    let source_inpute_field = document.getElementById("factorial-source");
+    /*alert("Привет");*/
+    let source_value = source_inpute_field.value;
+    ////////////////////////////////////////////////
+    let factorial_result = document.getElementById("factorial-result");
+    factorial_result.innerHTML = Factorial(source_value);
+}
