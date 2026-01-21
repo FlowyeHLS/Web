@@ -10,7 +10,7 @@
     <div id="header">
         <div>Header</div>
         <div onclick="switchBackground()">
-            <img src="img/moon.png"  id="switch-background" >
+            <img src="img/moon.png" id="switch-background">
         </div>
     </div>
     <!------------------------------------------------------------------->
@@ -22,12 +22,26 @@
             </div>
             <input type="file" id="image-file" onchange="setImage()">
         </div>
+
         <!------------------------------------------------------------>
         <br>
-        <div id="select-color" class="block"> 
-        <input type="color" id="choose-color" onchange="setBackground()"><label for="choose-color">Type ur favorite collor</label>
-           <div id="color-sample"></div>
+        <div id="select-color" class="block">
+            <input type="color" id="choose-color" onchange="setBackground()"><label for="choose-color">Type ur favorite collor</label>
+            <div id="color-sample"></div>
         </div>
+    </div>
+    <div id="countdown-timer">
+        <h2>Countdown timer</h2>
+        <input type="date" id="target-date" value="2026-01-31">
+        <input type="time" id="target-time" value="16:30">
+        <input type="button" id="btn-start" value="Start">
+    </div>
+    <div id="debug">
+        <div id="target-date-value"></div>
+        <div id="target-time-value"></div>
+        <div id="current-time-value"></div>
+        <div id="duration"></div>
+        <div id="timestamp"></div>
     </div>
     <script src="functions.js"></script>
 </body>
