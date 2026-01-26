@@ -1,4 +1,4 @@
-// JavaScript source code
+Ôªø// JavaScript source code
 function setImage() {
     let filename = document.getElementById("image-file");
     let reader = new FileReader();
@@ -108,7 +108,7 @@ document.getElementById("btn-start").onclick = function startCountdownTimer() {
     ////////////////////////////////////////
     //let after = document.createElement("h4");
     //after.id = "paradise";
-    //after.innerHTML = "—˛‰‡ ÌÛÊÌÓ ·Û‰ÂÚ ÔËÍÛÚËÚ¸ ÏÛÁÓÌ";
+    //after.innerHTML = "–°—é–¥–∞ –Ω—É–∂–Ω–æ –±—É–¥–µ—Ç –ø—Ä–∏–∫—Ä—É—Ç–∏—Ç—å –º—É–∑–æ–Ω";
     //display.after(after);
 }
 function tickCountdown() {
@@ -119,7 +119,7 @@ function tickCountdown() {
 
     let targetDateValue = targetDateControl.valueAsDate;
     let targetTimeValue = targetTimeControl.valueAsDate;
-    //¬˚‡‚ÌË‚‡ÂÏ ˜‡ÒÓ‚ÓÈ ÔÓˇÒ:
+    //–í—ã—Ä–∞–≤–Ω–∏–≤–∞–µ–º —á–∞—Å–æ–≤–æ–π –ø–æ—è—Å:
     targetDateValue.setHours(targetDateValue.getHours() + targetDateValue.getTimezoneOffset() / 60);
     targetTimeValue.setHours(targetTimeValue.getHours() + targetTimeValue.getTimezoneOffset() / 60);
 
@@ -138,6 +138,8 @@ function tickCountdown() {
     document.getElementById("duration").innerHTML = duration;
 
     let timestamp = Math.trunc(duration / 1000);
+    document.getElementById("signature").innerHTML = timestamp > 0 ? "–í—Ä–µ–º–µ–Ω–∏ –æ—Å—Ç–∞–ª–æ—Å—å" : "–í—Ä–µ–º–µ–Ω–∏ –ø—Ä–æ—à–ª–ª–æ";
+    if (timestamp < 0) timestamp = -timestamp;
     document.getElementById("timestamp").innerHTML = timestamp;
 
     const SECONDS_PER_MINUTE = 60;
@@ -157,8 +159,13 @@ function tickCountdown() {
         date = date % SECONDS_PER_YEAR;
         let years_unit = document.getElementById("years-unit");
         if (years_unit == null) {
-            let display = document.getElementById("display");
-            display.prepend(createTimeBlock("years", addLeadingZero(years)));
+            //let display = document.getElementById("display");
+            //display.prepend(createTimeBlock("years", addLeadingZero(years)));
+            //???
+            let years_block = createTimeBlock("years", years);
+            let hours_block = document.getElementById("hours-unit").parentElement;
+            hours_block.before(years_block);
+            //???
         }
         else years_unit.innerHTML = addLeadingZero(years);
     }
@@ -218,8 +225,15 @@ function tickCountdown() {
     document.getElementById("minutes-unit").innerHTML = addLeadingZero(minutes);
     document.getElementById("seconds-unit").innerHTML = addLeadingZero(seconds);
 
-    if (timestamp > 0 && document.getElementById("btn-start").value === "Stop")
+    //if (timestamp > 0 && document.getElementById("btn-start").value === "Stop")
+    if (document.getElementById("btn-start").value === "Stop")
         setTimeout(tickCountdown, 100);
+    if (timestamp == 0)
+    {
+        let player = document.getElementById("player");
+        player.play();
+    }
+
 }
 
 function createTimeBlock(name, value) {
