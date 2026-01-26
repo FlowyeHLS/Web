@@ -82,11 +82,13 @@ document.getElementById("btn-start").onclick = function startCountdownTimer() {
         btnStart.value = "Stop";
         targetDate.disabled = targetTime.disabled = true;
         tickCountdown();
+
     }
     else {
         btnStart.value = "Start";
         targetDate.disabled = targetTime.disabled = false;
         clearTimeout(tickCountdown);
+        resetDisplay();
     }
 
     //let display = document.getElementById("display");
@@ -111,7 +113,9 @@ document.getElementById("btn-start").onclick = function startCountdownTimer() {
     //after.innerHTML = "Сюда нужно будет прикрутить музон";
     //display.after(after);
 }
-function tickCountdown() {
+function tickCountdown()
+{
+    if (document.getElementById("btn-start").value === "Start") return;
     let now = new Date();
 
     let targetDateControl = document.getElementById("target-date");
@@ -264,4 +268,17 @@ function removeTimeBlock(name) {
         let display = block.parentElement;
         display.removeChild(block);
     }
+}
+function resetDisplay()
+{
+    let display = document.getElementById("display");
+    //display.innerHTML = "";
+    console.log(display.children.length);
+    let children = display.children;
+    console.log(children);
+    console.log(display.children[0]);
+    //while (display.children[0].children[0].id != "hours-unit")
+    //    display.children[0].remove();
+
+    removeTimeBlock("days");
 }
